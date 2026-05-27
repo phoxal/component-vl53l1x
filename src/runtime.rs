@@ -1,6 +1,6 @@
 use anyhow::{Result, bail};
 use phoxal_bus::pubsub::Stamped;
-use phoxal_component_api::capability::range::{self, Sample};
+use phoxal_component_api::v1::capability::range::{self, Sample};
 use phoxal_engine::clock::{Schedule, SchedulePolicy, Step};
 use phoxal_engine::step::{Io, Publisher, Runtime, RuntimeInputs};
 use phoxal_engine::{EmptyArgs, RobotRuntimeArgs};
