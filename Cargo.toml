@@ -1,0 +1,27 @@
+[package]
+name = "phoxal-component-vl53l1x"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description.workspace = true
+documentation.workspace = true
+homepage.workspace = true
+repository.workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+async-trait = { workspace = true }
+clap = { workspace = true, features = ["derive", "env"] }
+tokio = { workspace = true, features = ["macros", "rt", "rt-multi-thread", "signal", "sync", "time"] }
+tracing = { workspace = true }
+phoxal-engine = { workspace = true }
+phoxal-utils-helpers = { workspace = true }
+
+phoxal-utils-component = { workspace = true }
+
+phoxal-bus = { workspace = true }
+phoxal-component-api = { workspace = true }
+
+[lints]
+workspace = true
