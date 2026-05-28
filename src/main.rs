@@ -3,7 +3,7 @@ mod runtime;
 use anyhow::Result;
 use clap::Parser;
 use phoxal_engine::{DriverRuntimeArgs, step::RuntimeProcess};
-use phoxal_utils_helpers::init_tracing;
+use phoxal_helpers::init_tracing;
 use tracing::info;
 
 use crate::runtime::Config;

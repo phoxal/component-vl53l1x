@@ -1,11 +1,11 @@
 use anyhow::{Result, bail};
 use phoxal_bus::pubsub::Stamped;
+use phoxal_component::v1::CapabilityRef;
+use phoxal_component::v1::capability::{Capability, Range as RangeConfig};
 use phoxal_component_api::v1::capability::range::{self, Sample};
 use phoxal_engine::clock::{Schedule, SchedulePolicy, Step};
 use phoxal_engine::step::{Io, Publisher, Runtime, RuntimeInputs};
 use phoxal_engine::{EmptyArgs, RobotRuntimeArgs};
-use phoxal_utils_component::v1::CapabilityRef;
-use phoxal_utils_component::v1::capability::{Capability, Range as RangeConfig};
 
 #[derive(Clone)]
 pub struct Config {
@@ -13,10 +13,7 @@ pub struct Config {
 }
 
 impl Config {
-    pub fn new(
-        component_id: &str,
-        component: &phoxal_utils_component::v1::Component,
-    ) -> Result<Self> {
+    pub fn new(component_id: &str, component: &phoxal_component::v1::Component) -> Result<Self> {
         Ok(Self {
             range: Self::inspect(component_id, component)?,
         })
@@ -24,7 +21,7 @@ impl Config {
 
     fn inspect(
         component_id: &str,
-        component: &phoxal_utils_component::v1::Component,
+        component: &phoxal_component::v1::Component,
     ) -> Result<SampledSensor> {
         let mut range = None;
 
