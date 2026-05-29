@@ -17,11 +17,11 @@ members = ["."]
 anyhow = "1.0.102"
 async-trait = "0.1.89"
 clap = { version = "4.6.1", features = ["derive"] }
-phoxal-infra-bus = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
-phoxal-api-component = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
-phoxal-core-engine = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
-phoxal-core-component = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
-phoxal-infra-helpers = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
+phoxal-infra-bus = { git = "https://github.com/phoxal/framework", branch = "main" }
+phoxal-api-component = { git = "https://github.com/phoxal/framework", branch = "main" }
+phoxal-core-engine = { git = "https://github.com/phoxal/framework", branch = "main" }
+phoxal-core-component = { git = "https://github.com/phoxal/framework", branch = "main" }
+phoxal-infra-helpers = { git = "https://github.com/phoxal/framework", branch = "main" }
 tokio = { version = "1", features = ["macros", "rt", "rt-multi-thread", "time", "signal", "sync", "fs"] }
 tracing = "0.1.44"
 
@@ -34,14 +34,14 @@ codegen-units = 16
 
 # Patch the engine alias so a transitive git fetch lines up with the framework canonical source.
 [patch."https://github.com/phoxal/engine"]
-phoxal-infra-bus = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
-phoxal-api-component = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
-phoxal-core-engine = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
-phoxal-core-component = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
-phoxal-infra-helpers = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
-phoxal-core-robot = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
-phoxal-core-spatial = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
-phoxal-core-structure = { git = "https://github.com/phoxal/framework", branch = "chore/workspace-restructure" }
+phoxal-infra-bus = { git = "https://github.com/phoxal/framework", branch = "main" }
+phoxal-api-component = { git = "https://github.com/phoxal/framework", branch = "main" }
+phoxal-core-engine = { git = "https://github.com/phoxal/framework", branch = "main" }
+phoxal-core-component = { git = "https://github.com/phoxal/framework", branch = "main" }
+phoxal-infra-helpers = { git = "https://github.com/phoxal/framework", branch = "main" }
+phoxal-core-robot = { git = "https://github.com/phoxal/framework", branch = "main" }
+phoxal-core-spatial = { git = "https://github.com/phoxal/framework", branch = "main" }
+phoxal-core-structure = { git = "https://github.com/phoxal/framework", branch = "main" }
 
 [package]
 name = "phoxal-component-vl53l1x"
